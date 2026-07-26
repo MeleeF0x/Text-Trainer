@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажёр слепой печати</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>⌨️ Тренажёр слепой печати</h1>
+
+    <div style="display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 10px;">
+        <div id="authLinks">
+            <a href="register.html">Регистрация</a> | <a href="login.html">Вход</a>
+        </div>
+        <div id="userPanel" style="display: none; align-items: center; gap: 10px;">
+            <span id="usernameDisplay">Пользователь</span>
+            <button id="logoutBtn" style="background: #e74c3c; color: white; border: none; padding: 5px 15px; border-radius: 20px; cursor: pointer;">Выйти</button>
+        </div>
+    </div>
+
+    <!-- Панель управления -->
+    <div class="controls">
+        <div class="mode-selector">
+            <button id="generalModeBtn" class="active">Общий режим</button>
+            <button id="targetedModeBtn">Целевой режим</button>
+        </div>
+        <div id="targetLetterContainer" style="display: none;">
+            <label for="targetLetter">Целевая буква:</label>
+            <input type="text" id="targetLetter" maxlength="1" placeholder="A" value="a">
+            <button id="startBtn" class="btn primary">Начать</button>
+        </div>
+        <div id="generalStartContainer">
+            <button id="startGeneralBtn" class="btn primary">Начать общую тренировку</button>
+        </div>
+    </div>
+
+    <!-- Отображение текста -->
+    <div id="textDisplay" class="text-display">
+        <p id="targetText">Нажмите "Начать" для тренировки</p>
+    </div>
+
+    <!-- Поле ввода (скрыто до начала) -->
+    <label for="inputField"></label><input type="text" id="inputField" class="input-field" autofocus disabled placeholder="Начните печатать...">
+
+    <!-- Статистика в реальном времени -->
+    <div class="stats">
+        <div>Скорость: <span id="cpm">0</span> cpm</div>
+        <div>Ошибки: <span id="errors">0</span></div>
+        <div>Точность: <span id="accuracy">100</span>%</div>
+        <div>Время: <span id="timer">0</span> с</div>
+    </div>
+
+    <!-- Дополнительная статистика для целевого режима -->
+    <div id="letterErrorsContainer" style="display: none;">
+        <h3>Ошибки по буквам:</h3>
+        <div id="letterErrors"></div>
+    </div>
+
+    <div id="resultContainer" style="display: none;">
+        <h2>Результат тренировки</h2>
+        <div id="resultStats"></div>
+        <button id="resetBtn" class="btn">Новая тренировка</button>
+    </div>
+
+    <div class="stats" id="bestResultContainer" style="display: none;">
+        <h3>🏆 Лучший результат</h3>
+        <div id="bestResultStats">
+            <div>Скорость: <span id="bestSpeed">0</span> зн/мин</div>
+            <div>Точность: <span id="bestAccuracy">0</span>%</div>
+            <div>Дата: <span id="bestDate">—</span></div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

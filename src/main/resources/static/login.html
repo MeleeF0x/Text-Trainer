@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Тренажёр слепой печати</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .login-container h2 { text-align: center; }
+        .login-container label { display: block; margin: 10px 0 5px; font-weight: 500; }
+        .login-container input { width: 100%; padding: 10px; border: 2px solid #bdc3c7; border-radius: 8px; box-sizing: border-box; }
+        .login-container .btn { width: 100%; padding: 10px; margin-top: 15px; background: #3498db; color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 18px; cursor: pointer; }
+        .login-container .btn:hover { background: #2980b9; }
+        .login-container .message { margin-top: 15px; text-align: center; font-weight: bold; }
+        .login-container .link { text-align: center; margin-top: 15px; }
+        .error { color: #e74c3c; }
+        .success { color: #2ecc71; }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h2>🔐 Вход</h2>
+    <form id="loginForm">
+        <label for="username">Имя пользователя</label>
+        <input type="text" id="username" placeholder="Введите имя" required>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Введите пароль" required>
+        <button type="submit" class="btn">Войти</button>
+        <div id="message" class="message"></div>
+    </form>
+    <div class="link">
+        Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+    </div>
+</div>
+<script src="login.js"></script>
+</body>
+</html>
