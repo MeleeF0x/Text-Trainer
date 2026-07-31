@@ -37,4 +37,3 @@ build/
 
 ### CONF ###
 .env
-application.properties
