@@ -56,8 +56,14 @@
    ```
 3. Создайте файл `.env` на основе следующего примера и заполните все поля:
    ```
-   DB_PASSWORD=ваш__пароль
+   DB_PASSWORD=ваш_пароль_для_БД
    JWT_SECRET=JWT_ключ_не_менее_32_символов
+   ```
+
+3. Отредактируйте файл `src/main/resources/application.properties` по следующим параметрам:
+   ```
+   spring.datasource.username=<Имя_пользователя_в_БД>
+   spring.datasource.password=<Пароль_от_БД>
    ```
 4. Запустите контейнеры:
    ```bash
