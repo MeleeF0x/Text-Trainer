@@ -54,7 +54,7 @@
 2. Склонируйте репозиторий:
    ```bash
    git clone https://github.com/ваш-username/texttrainer.git
-   cd texttrainer
+   cd Text-Trainer
    ```
 3. Создайте файл `.env` на основе следующего примера и заполните все поля:
    ```
